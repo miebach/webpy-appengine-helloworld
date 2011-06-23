@@ -30,8 +30,8 @@ class index:
 
 class list:
     def GET(self):
-      people = db.GqlQuery("SELECT * FROM Person ORDER BY created DESC LIMIT 10")
-      return tlook.get_template("list.html").render(people=people)    
+        people = db.GqlQuery("SELECT * FROM Person ORDER BY created DESC LIMIT 10")
+        return tlook.get_template("list.html").render(people=people)    
 
 app = web.application(urls, globals())
 main = app.cgirun()
