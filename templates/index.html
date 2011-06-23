@@ -1,4 +1,8 @@
-$var title: Join Us
+<%inherit file="base.html"/>
+
+<%def name="title()">Join Us</%def>
+
+<%def name="body()">
 
 <form method="post">
   <label>Name: <br />
@@ -11,3 +15,5 @@ $var title: Join Us
 
   <input type="Submit" value="request membership" />
 </form>
+
+</%def>

@@ -1,9 +1,14 @@
-$def with (people)
-$var title: Suckers
+<%inherit file="base.html"/>
+
+<%def name="title()">Suckers</%def>
+
+<%def name="body()">
 
 <h3>Statisfied Customers</h3>
 <ul>
-$for person in people:
-    <li>$person.name</li>
+% for person in people:
+    <li>${person.name}</li>
+% endfor
 </ul>
 
+</%def>
