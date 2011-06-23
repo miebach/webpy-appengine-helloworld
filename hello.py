@@ -16,7 +16,15 @@ urls = (
 
 
 tdir = os.path.join(os.path.dirname(__file__),"templates")
-tlook = TemplateLookup(directories=[tdir])
+# input_encoding and output_encoding is important for unicode
+# template file. Reference:
+# http://www.makotemplates.org/docs/documentation.html#unicode
+# Also see http://webpy.org/cookbook/template_mako
+tlook = TemplateLookup(
+    directories=[tdir],
+    input_encoding='utf-8',
+    output_encoding='utf-8',
+)
 
 class index:
     def GET(self):
